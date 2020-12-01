@@ -1,2 +1,2 @@
-# AventOfCode
+# AdventOfCode
 https://adventofcode.com/

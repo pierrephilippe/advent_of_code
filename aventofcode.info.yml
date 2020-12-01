@@ -1,4 +1,0 @@
-name: "Avent Of Code"
-description: "Calendar Avent of code"
-type: module
-core_version_requirement: ^8.8 || ^9
