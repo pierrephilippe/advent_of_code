@@ -3,6 +3,7 @@ namespace Drupal\advent_of_code\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
 
+
 /**
  * An example controller.
  */
@@ -216,6 +217,8 @@ class ExpenseReport extends ControllerBase {
    */
   public function day1() {
 
+    $form = \Drupal::formBuilder()->getForm('\Drupal\advent_of_code\Form\CalculDayOneForm');
+
     $datas = $this->_datas;
     $result = "not found";
     foreach ($datas as $data1){
@@ -229,22 +232,14 @@ class ExpenseReport extends ControllerBase {
       }
     }
 
+//    $build = [
+//      '#markup' => $this->t('Result : ') . $result,
+//    ];
     $build = [
-      '#markup' => $this->t('Result : ') . $result,
+      '#type' => 'markup',
+      '#markup' => $form
     ];
-    return $build;
+    return $form;
   }
 
-  public static function myBatch() {
-    $batch = [
-      'title' => t('Calcul...'),
-      'operations' => [
-        ['my_function_1', [$account->id(),'story']],
-        ['my_function_2', []],
-      ],
-      'finished' => 'my_finished_callback',
-      'file' => 'path_to_file_containing_myfunctions',
-    ];
-    batch_set($batch);
-  }
 }

@@ -1,15 +1,7 @@
-adventofcode.content:
-  path: '/example'
-  defaults:
-    _controller: '\Drupal\advent_of_code\Controller\ExampleController::content'
-    _title: 'Hello World'
-  requirements:
-    _permission: 'access content'
-
 adventofcode.day1:
   path: '/day1'
   defaults:
     _controller: '\Drupal\advent_of_code\Controller\ExpenseReport::day1'
-    _title: 'Hello World'
+    _title: 'Day 1'
   requirements:
     _permission: 'access content'
