@@ -220,9 +220,11 @@ class ExpenseReport extends ControllerBase {
     $result = "not found";
     foreach ($datas as $data1){
       foreach ($datas as $data2){
-        if(((int)$data1 + (int)$data2) == 2020){
-          $result = $data1 * $data2;
-          continue(2);
+        foreach ($datas as $data3) {
+          if (((int)$data1 + (int)$data2 + (int)$data3) == 2020) {
+            $result = $data1 * $data2 * $data3;
+            continue(3);
+          }
         }
       }
     }
