@@ -1,5 +1,5 @@
 <?php
-  namespace Drupal\adventofcode\Controller;
+  namespace Drupal\advent_of_code\Controller;
 
   use Drupal\Core\Controller\ControllerBase;
 

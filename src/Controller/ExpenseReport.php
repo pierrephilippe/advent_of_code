@@ -1,5 +1,5 @@
 <?php
-namespace Drupal\adventofcode\Controller;
+namespace Drupal\advent_of_code\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
 
@@ -229,11 +229,22 @@ class ExpenseReport extends ControllerBase {
       }
     }
 
-
     $build = [
       '#markup' => $this->t('Result : ') . $result,
     ];
     return $build;
   }
 
+  public static function myBatch() {
+    $batch = [
+      'title' => t('Calcul...'),
+      'operations' => [
+        ['my_function_1', [$account->id(),'story']],
+        ['my_function_2', []],
+      ],
+      'finished' => 'my_finished_callback',
+      'file' => 'path_to_file_containing_myfunctions',
+    ];
+    batch_set($batch);
+  }
 }
