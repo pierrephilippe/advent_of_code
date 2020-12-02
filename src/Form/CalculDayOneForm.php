@@ -51,9 +51,13 @@ class CalculDayOneForm extends FormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
+    //init array
     $datas = $form_state->getValue('datas');
     $arrayDatas = preg_split('/\n|\r\n?/', $datas);
-    $countDatas = count($arrayDatas);
+    $intDatas = array_map('intval', $arrayDatas);
+    $intSortedData = asort($intDatas);
+    $countDatas = count($intDatas);
+
 
     $batch = array(
       'title' => t('Lancement du calcul...'),
@@ -61,7 +65,7 @@ class CalculDayOneForm extends FormBase {
       'error_message'    => t('An error occurred during processing'),
       'finished' => CalculDayOneForm::class . '::batchFinished',
       'operations' => [
-        [CalculDayOneForm::class . '::batchProcess', [$arrayDatas]],
+        [CalculDayOneForm::class . '::batchProcess', [$intDatas]],
       ]
     );
 
@@ -76,6 +80,9 @@ class CalculDayOneForm extends FormBase {
       $context['sandbox'] = [];
       $context['sandbox']['progress'] = 0;
       $context['sandbox']['max'] = 2;
+
+      //init array
+      $intDatas = array_map('intval', explode(',', $string));
     }
 
 
