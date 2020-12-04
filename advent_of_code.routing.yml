@@ -21,3 +21,11 @@ adventofcode.day3:
     _title: 'Day 3'
   requirements:
     _permission: 'access content'
+
+adventofcode.day4:
+  path: '/day4'
+  defaults:
+    _controller: '\Drupal\advent_of_code\Controller\Days::day4'
+    _title: 'Day 4'
+  requirements:
+    _permission: 'access content'
