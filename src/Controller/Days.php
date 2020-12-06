@@ -80,4 +80,18 @@ class Days extends ControllerBase {
     return $form;
   }
 
+  /**
+   * Returns a render-able array for a test page.
+   */
+  public function day6() {
+
+    $form = \Drupal::formBuilder()->getForm('\Drupal\advent_of_code\Form\CustomDeclarationForm');
+
+    $build = [
+      '#type' => 'markup',
+      '#markup' => $form
+    ];
+    return $form;
+  }
+
 }
