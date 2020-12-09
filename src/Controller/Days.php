@@ -121,4 +121,18 @@ class Days extends ControllerBase {
     ];
     return $form;
   }
+
+  /**
+   * Returns a render-able array for a test page.
+   */
+  public function day9() {
+
+    $form = \Drupal::formBuilder()->getForm('\Drupal\advent_of_code\Form\EncodingErrorForm');
+
+    $build = [
+      '#type' => 'markup',
+      '#markup' => $form
+    ];
+    return $form;
+  }
 }
