@@ -93,3 +93,11 @@ adventofcode.day12:
     _title: 'Day 12'
   requirements:
     _permission: 'access content'
+
+adventofcode.day13:
+  path: '/day13'
+  defaults:
+    _controller: '\Drupal\advent_of_code\Controller\Days::day13'
+    _title: 'Day 13'
+  requirements:
+    _permission: 'access content'
