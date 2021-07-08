@@ -1,0 +1,47 @@
+adventofcode.day1:
+  path: '/day1'
+  defaults:
+    _controller: '\Drupal\advent_of_code\Controller\Days::day1'
+    _title: 'Day 1'
+  requirements:
+    _permission: 'access content'
+
+adventofcode.day2:
+  path: '/day2'
+  defaults:
+    _controller: '\Drupal\advent_of_code\Controller\Days::day2'
+    _title: 'Day 2'
+  requirements:
+    _permission: 'access content'
+
+adventofcode.day3:
+  path: '/day3'
+  defaults:
+    _controller: '\Drupal\advent_of_code\Controller\Days::day3'
+    _title: 'Day 3'
+  requirements:
+    _permission: 'access content'
+
+adventofcode.day4:
+  path: '/day4'
+  defaults:
+    _controller: '\Drupal\advent_of_code\Controller\Days::day4'
+    _title: 'Day 4'
+  requirements:
+    _permission: 'access content'
+
+adventofcode.day5:
+  path: '/day5'
+  defaults:
+    _controller: '\Drupal\advent_of_code\Controller\Days::day5'
+    _title: 'Day 5'
+  requirements:
+    _permission: 'access content'
+
+adventofcode.day6:
+  path: '/day6'
+  defaults:
+    _controller: '\Drupal\advent_of_code\Controller\Days::day6'
+    _title: 'Day 6'
+  requirements:
+    _permission: 'access content'
